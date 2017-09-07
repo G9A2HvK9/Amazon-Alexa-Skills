@@ -12,10 +12,10 @@ To complete this challenge, **set up a new Alexa Skill with a single Intent: `He
 
 ### To complete this challenge, you will need to:
 
-- [ ] Sign up to the [Amazon Alexa Developer Program](https://developer.amazon.com/alexa).
-- [ ] Add a new Skill, called 'Hello World' and with an Invocation Name of 'Hello World'.
-- [ ] Add an Intent Schema with one Intent, called `HelloWorld`.
-- [ ] Make a single Utterance, tied to the `HelloWorld` Intent, and invoked by the phrase "say hello world".
+- [X] Sign up to the [Amazon Alexa Developer Program](https://developer.amazon.com/alexa).
+- [X] Add a new Skill, called 'Hello World' and with an Invocation Name of 'Hello World'.
+- [X] Add an Intent Schema with one Intent, called `HelloWorld`.
+- [X] Make a single Utterance, tied to the `HelloWorld` Intent, and invoked by the phrase "say hello world".
 
 ### Walkthrough
 
