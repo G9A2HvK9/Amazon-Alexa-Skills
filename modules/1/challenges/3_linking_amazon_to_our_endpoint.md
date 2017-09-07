@@ -12,10 +12,10 @@ To complete this challenge, **configure your Amazon Skill to use the HTTPS Endpo
 
 ### To complete this challenge, you will need to:
 
-- [ ] Through the Alexa Developer console, set your Alexa Skill Endpoint to the HTTPS address you got from ngrok in the previous challenge.
-- [ ] On the next page, use ngrok's wildcard SSL certificate for your ngrok subdomain.
-- [ ] Use the Service Simulator to send a test request to your application.
-- [ ] Verify that your application has received a JSON packet identical to the one displayed on the Service Simulator.
+- [X] Through the Alexa Developer console, set your Alexa Skill Endpoint to the HTTPS address you got from ngrok in the previous challenge.
+- [X] On the next page, use ngrok's wildcard SSL certificate for your ngrok subdomain.
+- [X] Use the Service Simulator to send a test request to your application.
+- [X] Verify that your application has received a JSON packet identical to the one displayed on the Service Simulator.
 
 ### Walkthrough
 

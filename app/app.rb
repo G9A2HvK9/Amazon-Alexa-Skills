@@ -3,7 +3,14 @@ require 'Sinatra'
 class App < Sinatra::Base
 
   post '/' do
-    p request.body
+    { version: "1.0",
+      response:{
+        outputSpeech: {
+          type: "PlainText",
+          text: "Hello World!"
+        }
+      }
+    }.to_json
   end
 
 end

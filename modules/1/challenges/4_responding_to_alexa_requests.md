@@ -12,8 +12,8 @@ To complete this challenge, **construct a JSON response from your application wh
 
 ### To complete this challenge, you will need to:
 
-- [ ] Using the [Alexa Response Body Documentation](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interface-reference#response-body-syntax), create the minimum possible response required to make Alexa say 'Hello World' whenever the endpoint is hit.
-- [ ] Restart the server, and test out the new response in the Service Simulator.
+- [X] Using the [Alexa Response Body Documentation](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interface-reference#response-body-syntax), create the minimum possible response required to make Alexa say 'Hello World' whenever the endpoint is hit.
+- [X] Restart the server, and test out the new response in the Service Simulator.
 
 ### Walkthrough
 
