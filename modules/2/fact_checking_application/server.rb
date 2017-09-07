@@ -6,8 +6,11 @@ class Server < Sinatra::Base
 
   post '/' do
 
-    number_facts_uri = URI("http://numbersapi.com/42")
+    number = JSON.parse(request.body.read)["request"]["intent"]["slots"]["number"]["value"]
+
+    number_facts_uri = URI("http://numbersapi.com/#{number}")
     number_fact = Net::HTTP.get(number_facts_uri)
+
     {
       version: "1.0",
       response: {
