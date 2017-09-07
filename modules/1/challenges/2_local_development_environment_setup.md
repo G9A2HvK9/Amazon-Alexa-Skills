@@ -12,10 +12,10 @@ To complete this challenge, **set up a new Sinatra Application with an Endpoint 
 
 ### To complete this challenge, you will need to:
 
-- [ ] Set up a [Sinatra](http://www.sinatrarb.com/) application with a single route, `POST '/'`.
-- [ ] Inside this route, print the contents of any incoming `request.body` to the command line.
-- [ ] Set up [ngrok](https://ngrok.com) to expose your local Sinatra application to the Internet.
-- [ ] Start your server, and make a note of the HTTPS endpoint given by ngrok.
+- [X] Set up a [Sinatra](http://www.sinatrarb.com/) application with a single route, `POST '/'`.
+- [X] Inside this route, print the contents of any incoming `request.body` to the command line.
+- [X] Set up [ngrok](https://ngrok.com) to expose your local Sinatra application to the Internet.
+- [X] Start your server, and make a note of the HTTPS endpoint given by ngrok. -- https://48be2b4c.ngrok.io
 
 ### Walkthrough
 
