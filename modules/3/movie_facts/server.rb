@@ -6,12 +6,11 @@ class Server < Sinatra::Base
 
   post '/' do
     parsed_request = JSON.parse(request.body.read)
-    this_is_the_first_question = parsed_request["session"]["new"] || parsed_request["session"]["attributes"].empty?
-    restart_requested = (parsed_request["request"]["intent"]["name"] == "AMAZON.StartOverIntent")
+    movie_facts_intent = (parsed_request["request"]["intent"]["name"] == "MovieFacts")
+    follow_up_intent = (parsed_request["request"]["intent"]["name"] == "FollowUp")
+    start_over_intent = (parsed_request["request"]["intent"]["name"] == "AMAZON.StartOverIntent")
 
-    p parsed_request["request"]["intent"]["name"] == "FollowUp"
-
-    if restart_requested
+    if start_over_intent
       return{
         version: "1.0",
         sessionAttributes: {},
@@ -25,10 +24,10 @@ class Server < Sinatra::Base
         }.to_json
     end
 
-    if this_is_the_first_question
+    if movie_facts_intent
       requested_movie = parsed_request["request"]["intent"]["slots"]["Movie"]["value"]
-      movie_list = Imdb::Search.new(requested_movie).movies
-      movie = movie_list.first
+      movie = Imdb::Search.new(requested_movie).movies.first
+
       return{
         version: "1.0",
         sessionAttributes: {
@@ -43,14 +42,10 @@ class Server < Sinatra::Base
         }.to_json
     end
 
-    if parsed_request["request"]["intent"]["name"] == "FollowUp"
+    if follow_up_intent
       movie_title = parsed_request["session"]["attributes"]["movieTitle"]
-      movie_list = Imdb::Search.new(movie_title).movies
-      movie = movie_list.first
+      movie = Imdb::Search.new(movie_title).movies.first
       role = parsed_request["request"]["intent"]["slots"]["Role"]["value"]
-      p role
-      p movie.director.join
-      p movie.cast_members.join(",")
 
       if role == "directed"
         response_text = "#{movie_title} was directed by #{movie.director.join}"
